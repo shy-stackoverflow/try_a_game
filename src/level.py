@@ -2,7 +2,7 @@ class Level(object):
     def __init__(self, level):
         self.blocks = []
         self.level = level
-        with open ('data/level/' + str(self.level) + '.x', 'r') as f:
+        with open ('breaker/data/level/' + str(self.level) + '.x', 'r') as f:
             r = 0
             for line in f.readlines():
                 col = len(line)

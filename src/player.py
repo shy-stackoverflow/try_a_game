@@ -14,7 +14,7 @@ class Player(pygame.sprite.Sprite):
         self.posXMax = xMax
         self.preChangeTime = getCurrentTime()
         for path in imgPaths:
-            img = pygame.image.load(path)
+            img = pygame.image.load("breaker/" + path)
             img = pygame.transform.scale(img, (PLAYER_SIZE_W, PLAYER_SIZE_H))
             self.images.append( img )
 

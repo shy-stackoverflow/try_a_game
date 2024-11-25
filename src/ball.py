@@ -10,14 +10,14 @@ class Ball(pygame.sprite.Sprite):
         self.posY = y
         self.dirX = dirX
         self.dirY = dirY
-        self.speed = 0.5
-        img = pygame.image.load(imgPath)
+        self.speed = 0.1
+        img = pygame.image.load("breaker/" + imgPath)
         img = pygame.transform.scale(img, (SPRITE_SIZE_W, SPRITE_SIZE_H))
         self.image = img
         self.rect = img.get_rect()
         self.preRotateTime = getCurrentTime()
-        self.jntmSound = pygame.mixer.Sound(SoundRes.JNTM)
-        self.ngmSound = pygame.mixer.Sound(SoundRes.NGM)
+        self.jntmSound = pygame.mixer.Sound("breaker/" + SoundRes.JNTM)
+        self.ngmSound = pygame.mixer.Sound("breaker/" + SoundRes.NGM)
     
     def SetSpeed(self, speed):
         self.speed = speed
